@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="historial-content">
+  <br>
+  <br>
+  <ion-card *ngIf="arregloComentarios.length > 0">
+    <ion-card-header>
+      <ion-card-title>
+        <h1 class="historial-title">Comentarios</h1>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-item *ngFor="let comentario of arregloComentarios">
+      <ion-label *ngIf="isComentarioVisible(comentario)">
+        <h2>{{ comentario.nomUser }}</h2>
+        <p>Comentario: {{ comentario.comentario }}</p>
+      </ion-label>
+      
+      <!-- Mostrar el botón de banear solo para Admin y si no está baneado -->
+      <ion-button *ngIf="currentUser?.nomUser === 'Admin' && comentario.baneado === 0" color="danger" (click)="banearComentario(comentario.idcomentario)">
+        Banear
+      </ion-button>
+    
+      <!-- Mostrar el botón de desbanear solo para Admin y si está baneado -->
+      <ion-button *ngIf="currentUser?.nomUser === 'Admin' && comentario.baneado === 1" color="success" (click)="desbanearComentario(comentario.idcomentario)">
+        Desbanear
+      </ion-button>
+    </ion-item>
+    
+    
+    
+    
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="irPaginaAgregar()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

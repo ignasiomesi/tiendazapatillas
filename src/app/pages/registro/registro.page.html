@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/inicio-sesion">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+  <br>
+  <br>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="titulo-principal">Registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="titulo-principal">Registrarse</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form (submit)="registrarUsuario()">
+          <ion-list>
+            <ion-item>
+              <ion-input label="Nombre" labelPlacement="floating" placeholder="Ingrese su nombre" [(ngModel)]="nombre"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input label="Apellido" labelPlacement="floating" placeholder="Ingrese su apellido" [(ngModel)]="apellido"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input label="Usuario" labelPlacement="floating" placeholder="Ingrese su usuario" [(ngModel)]="nomUser"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input label="Contraseña" labelPlacement="floating" type="password" placeholder="Ingrese su contraseña" [(ngModel)]="contra"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input label="Repetir Contraseña" labelPlacement="floating" type="password" placeholder="Repita su contraseña" [(ngModel)]="repiteContra"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input label="Código seguridad" labelPlacement="floating" type="text" inputmode="numeric" maxlength="4" placeholder="Código seguridad" [(ngModel)]="codigo"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Foto</ion-label>
+              <ion-input [(ngModel)]="foto" placeholder="URL de la foto" readonly></ion-input>
+              <ion-button slot="end" (click)="tomarFoto()">
+                <ion-icon name="camera"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </ion-list>
+
+          <div class="botones" (click)="registrarUsuario()">Registrar Usuario</div>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

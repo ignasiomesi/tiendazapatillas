@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="product-content">
+  <ion-list class="product-list">
+    <ion-card *ngFor="let producto of carrito" class="product-card">
+      <ion-card-header>
+        <ion-card-title>{{ producto.nombre }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p>Cantidad: {{ producto.cantidad }}</p>
+        <p>Precio: ${{ producto.precio | number:'1.0-0' }}</p>
+        <p>Total: ${{ producto.precio * producto.cantidad | number:'1.0-0' }}</p>
+        <ion-icon 
+  name="trash-bin-outline" 
+  (click)="presentAlert(producto)" 
+  class="delete-icon" 
+  style="display: block; margin: 0 auto; text-align: center;"></ion-icon>
+
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-item class="input-item">
+    <ion-label position="floating" style="  font-family: Roboto Condensed, sans-serif;">Contraseña</ion-label>
+    <ion-input [(ngModel)]="contra" type="password" class="input-field"></ion-input>
+  </ion-item>
+
+  <ion-item class="input-item">
+    <ion-input label="Código de seguridad" labelPlacement="floating" type="text" inputmode="numeric" maxlength="4" placeholder="Código seguridad" [(ngModel)]="codigo" class="input-field"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label style="  font-family: Roboto Condensed, sans-serif;">Total: {{ totalDisplay | currency }}</ion-label>
+    <ion-button class="botones" (click)="toggleTotal()" class="custom-button" style="  font-family: Roboto Condensed, sans-serif;">Mostrar en {{ mostrarPesos ? 'Dolares' : 'Pesos' }}</ion-button>
+  </ion-item>
+  <br>
+
+  <h5 class="botones" expand="full"  (click)="realizarCompra()">Realizar compra</h5>
+</ion-content>

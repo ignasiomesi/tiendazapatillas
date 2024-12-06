@@ -1,0 +1,111 @@
+/* Estilo para el fondo del contenido */
+ion-content {
+  --background: url('/assets/img/fondo3.jpeg') no-repeat center center / cover;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;  /* Centra todo el contenido verticalmente */
+  align-items: center;  /* Centra todo el contenido horizontalmente */
+  font-family: "Roboto Condensed", sans-serif; /* Aplica la fuente globalmente */
+}
+
+/* Estilo para la tarjeta */
+.login-card {
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo para el encabezado de la tarjeta */
+ion-card-header {
+  background-color: rgba(255, 255, 255, 0.8);  /* Fondo un poco más oscuro */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+  width: 100%;
+}
+
+/* Estilo para el título dentro de la tarjeta */
+ion-card-title h1 {
+  font-size: 45px;
+  font-weight: bold;
+  color: white; /* El título será blanco */
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;  /* Asegura que se usa la misma fuente */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil para el título */
+  margin: 0;
+}
+
+/* Estilo para los datos */
+.datos {
+  font-size: 18px;  /* Fuente más pequeña para los datos */
+  text-align: center;  /* Centra el texto */
+  font-family: "Roboto Condensed", sans-serif;  /* Usamos la misma fuente globalmente */
+}
+
+.datos h2 {
+  font-family: "Roboto Condensed", sans-serif;  /* Usamos la misma fuente globalmente */
+  font-size: 22px;  /* Títulos más grandes de los datos */
+  font-weight: bold;
+  color: #007aff;
+  margin-bottom: 10px;
+}
+
+.datos p {
+  font-size: 18px;
+  color: #555;
+  margin: 0;
+}
+
+/* Estilo para los botones */
+.botones {
+  margin-top: 10px;
+  border-radius: 30px;  /* Botones redondeados */
+  font-family: "Roboto Condensed", sans-serif;  /* Usamos la misma fuente para los botones */
+  font-weight: bold;
+  text-transform: uppercase;  /* Texto en mayúsculas */
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #386ea8; /* Fondo inicial de los botones */
+  color: white; /* Color del texto */
+  font-size: 14px;  /* Letra más pequeña */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 100%;
+  max-width: 350px; /* Establece un tamaño máximo para los botones */
+  display: inline-block;
+}
+
+/* Efecto hover para los botones */
+.botones:hover {
+  background-color: #003972;  /* Fondo más oscuro al pasar el mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+}
+
+/* Estilo para los botones cuando están en foco o se presionan */
+.botones:focus, .botones:active {
+  outline: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
+  background-color: #005bb5;  /* Fondo más azul */
+}
+
+/* Estilo para los inputs y labels */
+ion-item, ion-input, ion-label {
+  font-family: "Roboto Condensed", sans-serif;  /* Usamos la misma fuente globalmente */
+  font-size: 16px;
+  text-align: center; /* Centra el texto en los inputs */
+}
+
+/* Personalización del ion-input */
+ion-input {
+  --padding-start: 10px;
+  --padding-end: 10px;
+}
+
+.iniciar{
+  font-family: "Roboto Condensed", sans-serif;  /* Usamos la misma fuente globalmente */
+}

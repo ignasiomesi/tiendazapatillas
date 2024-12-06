@@ -1,3 +1,56 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu-toggle>
+    <ion-menu contentId="main-content" side="start">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>
+            <div>
+              <h1 class="titulo">STREETSH</h1>
+            </div>
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+  
+      <ion-content class="menu-content">
+        <ion-list>
+          <ion-item [routerDirection]="'root'" [routerLink]="'/home'" lines="none" slot="start" class="menu-icon">
+            <ion-label class="menu-label" [routerLink]="'/home'">Inicio</ion-label>
+          </ion-item>
+
+          <!-- Mostrar "Iniciar Sesión" solo si no ha iniciado sesión -->
+          <ion-item *ngIf="!userLoggedIn" lines="none">
+            <ion-icon name="person-outline" slot="start" class="menu-icon"></ion-icon>
+            <ion-label class="menu-label" [routerLink]="'/inicio-sesion'">Iniciar Sesión</ion-label>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-icon name="storefront-outline" slot="start" class="menu-icon"></ion-icon>
+            <ion-label class="menu-label" [routerLink]="'/zapatillas'">Zapatillas</ion-label>
+          </ion-item>
+
+          <ion-item lines="none" *ngIf="userLoggedIn">
+            <ion-icon name="man-outline" slot="start" class="menu-icon"></ion-icon>
+            <ion-label class="menu-label" [routerLink]="'/perfil'">Perfil</ion-label>
+          </ion-item>
+
+          <!-- Modificado: Mostrar "Admin" solo si está logueado y el usuario es "Pansio" -->
+          <ion-item *ngIf="userLoggedIn && isAdminUser">
+            <ion-icon name="glasses-outline" slot="start" class="menu-icon"></ion-icon>
+            <ion-label class="menu-label" [routerLink]="'/admin'">Admin</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="glasses-outline" slot="start" class="menu-icon"></ion-icon>
+            <ion-label class="menu-label" [routerLink]="'/comentarios'">comentarios</ion-label>
+          </ion-item>
+
+          <ion-item *ngIf="userLoggedIn">
+            <ion-button color="danger" (click)="cerrarSesion()">Cerrar Sesión</ion-button>
+          </ion-item>
+          
+        </ion-list>
+      </ion-content>
+    </ion-menu>  
+  </ion-menu-toggle>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>

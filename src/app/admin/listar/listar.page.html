@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/admin">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="product-content">
+  <br>
+  <ion-button expand="full" color="primary" (click)="actualizarCambios()">Actualizar</ion-button>
+  <br>
+
+  <ion-list>
+    <ion-card *ngFor="let producto of arregloProductos" class="product-card">
+      <ion-card-header>
+        <ion-card-title>{{ producto.nombre }}</ion-card-title>
+      </ion-card-header>
+
+      <img [src]="producto.foto" (error)="onImageError($event)" alt="Imagen del producto" />
+
+      <ion-card-content>
+        <p>{{ producto.descripcion }}</p>
+        <p>Precio: {{ producto.precio }} $</p>
+        <p>Marca: {{ producto.marca }}</p>
+        <p>Stock: {{ producto.stock }}</p>
+        <p>Sección: {{ producto.seccion === 'E' ? 'Estilo' : 'Deportivo' }}</p>
+
+        <!-- Botón "Modificar" -->
+        <h5 class="botones" expand="full" (click)="modificar(producto)">Modificar</h5>
+
+        <h5 class="botones" expand="full" (click)="eliminar(producto)">Eliminar</h5>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="irpagina()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

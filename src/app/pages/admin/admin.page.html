@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="admin-content">
+  <div class="titulo-container">
+    <h1 class="main-titulo">Zona Administración</h1>
+  </div>
+
+  <br>
+  <br>
+
+  <div>
+    <h5 class="botones" [routerLink]="'/listar'">Stock zapatillas</h5>
+  </div>
+  <br>
+  <br>
+  <div class="boton">
+    <h5 class="botones" [routerLink]="'/usuarios'">Usuarios registrados</h5>
+  </div>
+  <br>
+  <br>
+  <div class="boton">
+    <h5 class="botones" [routerLink]="'/historial-compras'">Historial de compras</h5>
+  </div>
+</ion-content>

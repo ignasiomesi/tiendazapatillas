@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/perfil">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="historial-content">
+  <br>
+  <br>
+  <ion-card class="historial-card">
+    <ion-card-header>
+      <ion-card-title>
+        <h1 class="historial-title">Historial de Compras</h1>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngIf="historialCompras.length > 0" class="compras-list">
+        <ion-item *ngFor="let compra of historialCompras" >
+          <ion-label>
+            <h2>{{ compra.nombre }}</h2>
+            <p>Precio: ${{ compra.precio | number:'1.0-0' }}</p>
+            <p>Cantidad: {{ compra.cantidad }}</p>
+            <p>Fecha: {{ compra.fecha | date:'short' }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <br>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

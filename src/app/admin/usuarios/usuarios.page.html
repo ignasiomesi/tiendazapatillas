@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button routerLink="/admin">Volver</ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="historial-content">
+  <br>
+  <br>
+  <ion-card *ngIf="arregloUsuarios.length > 0" class="historial-card">
+    <ion-card-header>
+      <ion-card-title>
+        <h1 class="historial-title">Usuarios registrados</h1>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-item *ngFor="let usuario of arregloUsuarios">
+      <ion-label>
+        <h2>{{ usuario.nomUser }}</h2>
+        <p>Nombre: {{ usuario.nombre}}</p>
+        <p>Apellido: {{ usuario.apellido}}</p>
+        <p>ID: {{ usuario.idusuario }}</p>
+        <p>Código: {{ usuario.codigo }}</p>
+      </ion-label>
+      
+      <ion-buttons slot="end">
+        <ion-button (click)="eliminar(usuario)">Eliminar</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-card>
+</ion-content>
+

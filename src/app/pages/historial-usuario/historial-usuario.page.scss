@@ -1,0 +1,91 @@
+/* Estilo para el fondo del contenido */
+ion-content.historial-content {
+    --background: url('/assets/img/fondo3.jpeg') no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+
+
+
+  /* Estilo para la tarjeta de historial de compras */
+  .historial-card {
+    max-width: 500px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.382);
+    align-items: center;  /* Centra el contenido dentro de la tarjeta */
+    font-family: "Roboto Condensed", sans-serif;
+
+  }
+  
+  /* Estilo para el título dentro de la tarjeta */
+  .historial-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+  }
+  
+  /* Estilo para la lista de compras */
+
+  
+  /* Estilo para cada ítem de compra */
+  .compra-item {
+    --background: rgba(255, 255, 255, 0.8);
+    margin: 15px 0;
+    border-radius: 30px;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+    font-family: "Roboto Condensed", sans-serif;
+
+  }
+  
+  
+  /* Estilo para la etiqueta de cada ítem */
+  ion-label h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #505050;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  ion-label p{
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  .compras-list{
+    border-radius: 30px;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #f0f0f0;
+  }
+
+  ion-label{
+    border-radius: 30px;
+    font-family: "Roboto Condensed", sans-serif;
+
+  }
+
+
+
+
+
+
+  
+  /* Estilo para el ítem cuando no hay compras */
+  .no-compras {
+    --background: rgba(255, 255, 255, 0.8);
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="product-content">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let producto of arregloProductos">
+        <ion-card class="product-card">
+          <img alt="Producto" [src]="producto.foto || 'https://ionicframework.com/docs/img/demos/card-media.png'" class="product-image"/>
+          <ion-card-header>
+            <ion-card-title>{{ producto.nombre }}</ion-card-title>
+            <ion-card-subtitle>Precio: ${{ producto.precio | number:'1.0-0' }}</ion-card-subtitle>
+            <ion-card-subtitle>Descripcion: {{ producto.descripcion }}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+
+            <!-- Selector de cantidad para el producto en el carrito -->
+            <ion-item>
+              <ion-label style="border-radius: 30px;">Cantidad:</ion-label>
+              <ion-input 
+                [(ngModel)]="cantidadSeleccionada" 
+                type="number" 
+                min="1" 
+                [max]="producto.stock" 
+                step="1" 
+                style="width: 60px; text-align: center;">
+              </ion-input>
+            </ion-item>
+          </ion-card-content>
+
+          <h5 class="botones" expand="full"  (click)="agregarAlCarrito(producto)">Agregar al carrito</h5>
+
+          <br>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

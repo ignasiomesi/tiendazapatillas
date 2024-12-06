@@ -1,0 +1,79 @@
+/* Estilo para el fondo del contenido */
+.product-content {
+  --background: url('/assets/img/fondo3.jpeg') no-repeat center center / cover;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo para las tarjetas de productos */
+.product-card {
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo claro */
+}
+
+/* Estilo para el encabezado de la tarjeta de producto */
+ion-card-header {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+}
+
+/* Estilo para el título dentro de la tarjeta de producto */
+ion-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Estilo para los párrafos dentro de la tarjeta de producto */
+ion-card-content p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+}
+
+/* Estilo para los botones */
+.botones {
+  margin-top: 10px;
+  border-radius: 30px;  /* Botones redondeados */
+  font-family: "Roboto Condensed", sans-serif;  /* Fuente para los botones */
+  font-weight: bold;  /* Aseguramos que el texto en los botones sea en negrita */
+  text-transform: uppercase;  /* Opcional: Hace que el texto esté en mayúsculas */
+  padding: 10px 20px;  /* Espaciado dentro del botón */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para los botones */
+  background-color: #386ea8; /* Fondo inicial de los botones */
+  color: white; /* Color de texto blanco */
+  font-size: 14px;  /* Letra más pequeña */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;  /* Centra el texto dentro del botón */
+  width: 100%;  /* Hace que el botón ocupe el ancho completo */
+  max-width: 350px;  /* Establece un tamaño máximo para los botones */
+  display: inline-block;  /* Asegura que el botón se comporte como un bloque en línea */
+  justify-content: center;  /* Centra todo el contenido verticalmente */
+  align-items: center;  /* Centra todo el contenido horizontalmente */
+  transform: translateX(18px);  /* Mueve el botón 50px a la derecha */
+
+}
+
+
+
+/* Estilo para los inputs */
+.input-item {
+  margin: 20px 0;
+}
+
+
+

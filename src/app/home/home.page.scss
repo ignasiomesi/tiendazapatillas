@@ -1,27 +1,91 @@
-#container {
+
+.titulo-container {
+  font-family: "Nerko One", cursive;
+  display: flex;
+  justify-content: center;
+  padding: 20px; /* Espaciado interno general */
+}
+
+.main-titulo {
+  font-family: "Nerko One", cursive;
+  font-size: 4rem; /* Tamaño del título, ajusta según prefieras */
+  color: #fff; /* Color del texto, ajusta según tu diseño */
+  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.5);
+}
+.sub-titulo {
+  font-family: "Nerko One", cursive;
+  font-size: 2rem; /* Tamaño del título, ajusta según prefieras */
+  color: #fff; /* Color del texto, ajusta según tu diseño */
+  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
   text-align: center;
+}
 
+
+/* Contenedor para la imagen */
+.image-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  //align-items: center; /* Centra verticalmente */
+}
+
+/* Estilo para la imagen */
+.image-container img {
+  width: 200px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 200px; /* Mantiene la proporción de la imagen */
+}
+
+.imagenyamal {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla, ajusta según sea necesario */
+  margin-top: 50px;
+}
+
+.imagenyamal img {
+  width: 280px; /* Mantén el tamaño de la imagen */
+  height: 350px;
+}
+
+.frases {
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 1.35rem; /* Tamaño del título, ajusta según prefieras */
+  color: #fff; /* Color del texto, ajusta según tu diseño */
+  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  margin-top: -70px;
+  text-align: center;
+}
+.zapatillas {
+  display: flex; /* Alinea las imágenes en una fila */
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  gap: 3px; /* Espacio entre las imágenes */
+}
+
+.zapatillas img {
+  width: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 150px; /* Mantiene el tamaño pequeño */
+  object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin recortes */
+}
+
+.anunciozapas {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.35rem; /* Tamaño del título, ajusta según prefieras */
+  color: #fff; /* Color del texto, ajusta según tu diseño */
+  text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  margin-top: -70px;
+  text-align: center;
+}
+
+.botonadmin {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}

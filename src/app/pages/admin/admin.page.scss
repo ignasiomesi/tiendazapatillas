@@ -1,0 +1,36 @@
+
+  .botones {
+    margin-top: 10px;
+    border-radius: 30px;  /* Botones redondeados */
+    font-family: "Roboto Condensed", sans-serif;  /* Fuente para los botones */
+    font-weight: bold;  /* Aseguramos que el texto en los botones sea en negrita */
+    text-transform: uppercase;  /* Opcional: Hace que el texto esté en mayúsculas */
+    padding: 10px 20px;  /* Espaciado dentro del botón */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para los botones */
+    background-color: #386ea8; /* Fondo inicial de los botones */
+    color: white; /* Color de texto blanco */
+    font-size: 14px;  /* Letra más pequeña */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;  /* Centra el texto dentro del botón */
+    width: 100%;  /* Hace que el botón ocupe el ancho completo */
+    max-width: 350px;  /* Establece un tamaño máximo para los botones */
+    display: inline-block;  /* Asegura que el botón se comporte como un bloque en línea */
+    justify-content: center;  /* Centra todo el contenido verticalmente */
+    align-items: center;  /* Centra todo el contenido horizontalmente */
+    transform: translateX(18px);  /* Mueve el botón 50px a la derecha */
+
+  }
+
+  .titulo-container {
+    font-family: "Nerko One", cursive;
+    display: flex;
+    justify-content: center;
+    padding: 20px; /* Espaciado interno general */
+  }
+  
+  .main-titulo {
+    font-family: "Nerko One", cursive;
+    font-size: 2rem; /* Tamaño del título, ajusta según prefieras */
+    color: #fff; /* Color del texto, ajusta según tu diseño */
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.5);
+  }

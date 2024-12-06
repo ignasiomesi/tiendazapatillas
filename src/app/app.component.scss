@@ -1,0 +1,28 @@
+ion-menu {
+    --background: white; /* Fondo blanco */
+  }
+  
+  .menu-content {
+    --background: white; /* Fondo blanco del contenido del menú */
+  }
+  
+.menu-label{
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.titulo{
+  font-family: "Nerko One", cursive;
+}
+
+/* Asegúrate de que esto esté en tu archivo CSS o SCSS */
+.menu-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 0px; /* Ajusta este valor según sea necesario */
+}
+
+.menu-label {
+  margin-left: 20px; /* Ajusta este valor según sea necesario */
+}
+
+

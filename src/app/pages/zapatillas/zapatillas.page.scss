@@ -1,0 +1,76 @@
+/* Estilo para el fondo del contenido */
+.product-content {
+  --background: url('/assets/img/fondo3.jpeg') no-repeat center center / cover;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Estilo para las tarjetas de productos dentro de la cuadrícula */
+.product-card {
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo claro */
+}
+
+/* Estilo para las imágenes dentro de las tarjetas de producto */
+.product-image {
+  width: 100%;
+  height: 200px;  /* Altura fija para todas las imágenes */
+  object-fit: cover;  /* Ajusta la imagen sin distorsionarse */
+  border-radius: 12px 12px 0 0;  /* Esquinas redondeadas en la parte superior */
+}
+
+/* Estilo para el encabezado de la tarjeta de producto */
+ion-card-header {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+}
+
+/* Estilo para el título dentro de la tarjeta de producto */
+ion-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Estilo para el subtítulo */
+ion-card-subtitle {
+  font-size: 1rem;
+  color: #777;
+}
+
+
+
+.botones {
+  margin-top: 10px;
+  border-radius: 30px;  /* Botones redondeados */
+  font-family: "Roboto Condensed", sans-serif;  /* Fuente para los botones */
+  font-weight: bold;  /* Aseguramos que el texto en los botones sea en negrita */
+  text-transform: uppercase;  /* Opcional: Hace que el texto esté en mayúsculas */
+  padding: 10px 20px;  /* Espaciado dentro del botón */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para los botones */
+  background-color: #386ea8; /* Fondo inicial de los botones */
+  color: white; /* Color de texto blanco */
+  font-size: 14px;  /* Letra más pequeña */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;  /* Centra el texto dentro del botón */
+  width: 70%;  /* Hace que el botón ocupe el ancho completo */
+  max-width: 350px;  /* Establece un tamaño máximo para los botones */
+  display: inline-block;  /* Asegura que el botón se comporte como un bloque en línea */
+}

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/perfil">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="perfil-content">
+  <br>
+  <br>
+  <br>
+  <ion-card class="perfil-card">
+    <ion-card-header>
+      <ion-card-title>
+        <h1 class="iniciar">Modificar Perfil</h1>
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form [formGroup]="formularioPerfil" (ngSubmit)="modificarPerfil()">
+        
+        <!-- Nombre de Usuario: texto alineado a la izquierda -->
+        <ion-item>
+          <ion-label class="left-align">Nombre de usuario: {{ usuarioLogueado?.nomUser }}</ion-label>
+        </ion-item>
+
+        <!-- Campo de nueva contraseña centrado -->
+        <ion-item>
+          <ion-input label="Ingrese la nueva contraseña " labelPlacement="floating" type="password" placeholder="Ingrese nueva contraseña" formControlName="nuevaContra"></ion-input>
+        </ion-item>
+
+        <!-- Campo de nuevo código de seguridad centrado -->
+        <ion-item>
+          <ion-input label="Repita la nueva contraseña" labelPlacement="floating" type="password" placeholder="Repita la nueva contraseña" formControlName="repiteContra"></ion-input>
+        </ion-item>
+
+        <!-- Botón centrado -->
+        <h5 class="botones" (click)="modificarPerfil()">Guardar Cambios</h5>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

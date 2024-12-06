@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="perfil-container">
+    <!-- Mostrar la imagen de perfil -->
+    <img *ngIf="usuario?.foto" [src]="usuario?.foto" alt="Imagen de perfil" class="perfil-img" (error)="onImageError($event)" />
+    
+    <!-- Si no se encuentra imagen, se muestra la imagen por defecto -->
+    <img *ngIf="!usuario?.foto" src="https://th.bing.com/th/id/R.910d743c758bd4103ff3528586fbb77f?rik=zDGAvxW1zCJGgQ&pid=ImgRaw&r=0" alt="Imagen por defecto" class="perfil-img" />
+
+    <ion-card class="perfil-card">
+      <ion-card-header>
+        <ion-card-title>
+          <h1 class="iniciar">Bienvenido {{ usuario?.nomUser || 'Usuario' }}</h1>
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label class="datos">
+              <h2>Nombre</h2>
+              <p>{{ usuario?.nombre || 'No disponible' }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label class="datos">
+              <h2>Nombre de Usuario</h2>
+              <p>{{ usuario?.nomUser || 'No disponible' }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label class="datos">
+              <h2>Código</h2>
+              <p>{{ mostrarCodigo() }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-button expand="full" color="primary" (click)="irHistorial()">Mis compras</ion-button>
+        <ion-button expand="full" color="secondary" (click)="modificar()">Cambiar contraseña</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

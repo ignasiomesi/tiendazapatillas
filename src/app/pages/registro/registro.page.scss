@@ -1,0 +1,85 @@
+/* Estilo para el título "Registrarse" igual al título "Iniciar Sesión" */
+.titulo-principal {
+  font-size: 45px; /* Tamaño de fuente */
+  font-weight: bold;
+  color: white; /* Color blanco */
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;  /* Fuente igual a la de los botones */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil para el título */
+}
+
+/* Fondo del contenido */
+ion-content {
+  --background: url('/assets/img/fondo3.jpeg') no-repeat center center / cover;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;  /* Centra el contenido verticalmente */
+  align-items: center;  /* Centra el contenido horizontalmente */
+}
+
+/* Estilo para la tarjeta de registro */
+ion-card {
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centra el contenido dentro de la tarjeta */
+}
+
+/* Estilo para el encabezado de la tarjeta */
+ion-card-header {
+  background-color: rgba(255, 255, 255, 0.8);  /* Fondo un poco más oscuro */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+  width: 100%;  /* Hace que el encabezado ocupe todo el ancho */
+}
+
+/* Estilo para los botones h5 */
+.botones {
+  margin-top: 20px;
+  padding: 15px 30px;  /* Espaciado dentro del botón */
+  border-radius: 30px;  /* Botones redondeados */
+  font-family: "Roboto Condensed", sans-serif;  /* Fuente para los botones */
+  font-weight: bold;  /* Aseguramos que el texto en los botones sea en negrita */
+  text-transform: uppercase;  /* Hace que el texto esté en mayúsculas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para los botones */
+  background-color: #386ea8; /* Fondo inicial de los botones */
+  color: white; /* Color de texto blanco */
+  font-size: 14px;  /* Letra más pequeña */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;  /* Centra el texto dentro del botón */
+  width: 100%;  /* Hace que el botón ocupe el ancho completo */
+  max-width: 350px;  /* Establece un tamaño máximo para los botones */
+  display: inline-block;  /* Asegura que el botón se comporte como un bloque en línea */
+  cursor: pointer;
+}
+
+/* Estilo para los botones al estar presionados o al tener el foco */
+.botones:focus, .botones:active {
+  outline: none;  /* Eliminamos el cuadro de enfoque */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al presionar */
+  background-color: #003972;  /* Fondo más oscuro cuando el mouse está sobre el botón */
+}
+
+/* Efecto hover para los botones */
+.botones:hover {
+  background-color: #005bb5;  /* Fondo más oscuro cuando el mouse está sobre el botón */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Efecto de sombra al pasar el mouse */
+}
+
+/* Estilo para los inputs y labels */
+ion-item, ion-input, ion-label {
+  font-family: "Roboto Condensed", sans-serif;  /* Usamos la misma fuente que el título y los botones */
+  font-size: 16px; /* Ajustamos el tamaño de fuente en los inputs */
+  text-align: center; /* Centra el texto en los inputs */
+}
+
+/* Personalización del ion-input para mejorar la apariencia */
+ion-input {
+  --padding-start: 10px;
+  --padding-end: 10px;
+}

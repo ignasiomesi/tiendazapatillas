@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="titulo-principal">Crear Producto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="titulo-principal">Crear Nuevo Producto</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form (submit)="crear()">
+          <ion-list>
+            <ion-item>
+              <ion-input label="Nombre" labelPlacement="floating" placeholder="Ingrese el nombre del producto" [(ngModel)]="nombre"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input label="Marca" labelPlacement="floating" placeholder="Ingrese la marca" [(ngModel)]="marca"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input label="Precio" labelPlacement="floating" type="number" inputmode="numeric" placeholder="Precio" [(ngModel)]="precio"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input label="Descripción" labelPlacement="floating" placeholder="Ingrese la descripción" [(ngModel)]="descripcion"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input label="Stock" labelPlacement="floating" type="number" inputmode="numeric" placeholder="Stock" [(ngModel)]="stock"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-select [(ngModel)]="seccion" placeholder="Seleccionar Sección">
+                <ion-select-option value="E">Estilo</ion-select-option>
+                <ion-select-option value="D">Deportivo</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Foto</ion-label>
+              <ion-input [(ngModel)]="foto" placeholder="URL de la foto" readonly></ion-input>
+              <ion-button slot="end" (click)="tomarFoto()">
+                <ion-icon name="camera"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </ion-list>
+
+          <div class="botones" (click)="crear()">Crear Producto</div> <!-- Botón personalizado -->
+          <div class="botones" [routerLink]="['/listar']">Ir a Página Listar</div> <!-- Botón personalizado -->
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
